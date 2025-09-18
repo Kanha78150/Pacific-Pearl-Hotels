@@ -1,0 +1,114 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const stats = [
+  { value: "1%", label: "Customer Satisfaction Rate" },
+  { value: "1%", label: "Occupancy Rate Achieved" },
+  { value: "1%", label: "Revenue Growth Yearly" },
+  { value: "1%", label: "Repeat Guest Rate" },
+];
+
+const logos = [
+  "/images/logos/Oimg1.png",
+  "/images/logos/Oimg2.png",
+  "/images/logos/Oimg3.png",
+  "/images/logos/Oimg4.png",
+  "/images/logos/Oimg5.png",
+];
+
+const AssociationsPortfolio = () => {
+  return (
+    <section className="w-full">
+      {/* Associations */}
+      <div className="bg-white py-12 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-3xl font-gilda font-normal text-[#000000] mb-10"
+        >
+          Our Associations
+        </motion.h2>
+
+        <div className="flex flex-wrap items-center justify-center gap-30">
+          {logos.map((logo, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src={logo}
+                alt="Association Logo"
+                width={120}
+                height={60}
+                className="object-contain"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Portfolio */}
+      <div className="bg-gradient-to-b from-[#001229] to-[#000000] text-white py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-semibold mb-6"
+          >
+            Our Impressive Portfolio of Hospitality Assets
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-300 mb-8"
+          >
+            With over 130 hotels in our portfolio, we are proud to deliver
+            exceptional experiences across diverse markets. Our commitment to
+            quality and innovation sets us apart in the hospitality industry.
+          </motion.p>
+
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="px-6 py-3 border border-gray-400 hover:bg-white hover:text-black transition"
+          >
+            Learn More
+          </motion.button>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto mt-16 text-center">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2, duration: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-3xl font-bold">{stat.value}</p>
+              <p className="text-sm text-gray-400 mt-2">{stat.label}</p>
+              <div className="w-12 h-[1px] bg-gray-500 mx-auto mt-2" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AssociationsPortfolio;
