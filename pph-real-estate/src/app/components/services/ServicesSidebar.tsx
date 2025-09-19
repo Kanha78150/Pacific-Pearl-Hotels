@@ -33,8 +33,8 @@ export default function AboutSidebar() {
       sections.forEach(({ id }) => {
         const btn = document.getElementById(`btn-${id}`);
         if (btn) {
-          if (id === current) btn.classList.add("bg-[#000926]", "text-white");
-          else btn.classList.remove("bg-[#000926]", "text-white");
+          if (id === current) btn.classList.add("bg-[#010810]", "text-white");
+          else btn.classList.remove("bg-[#010810]", "text-white");
         }
       });
     };
@@ -43,13 +43,13 @@ export default function AboutSidebar() {
   }, []);
 
   return (
-    <aside className="sticky top-24 space-y-2 w-full md:w-64">
+    <aside className="sticky top-24 space-y-2 border border-[#E7E7E7] w-full md:w-64">
       {sections.map((s) => (
         <button
           key={s.id}
           id={`btn-${s.id}`}
           onClick={() => handleClick(s.id)}
-          className="w-full text-left px-4 py-2 rounded transition hover:bg-[#000926] hover:text-white"
+          className="w-full text-left px-4 py-2 rounded transition hover:bg-[#010810] hover:text-white border-b border-[#E7E7E7]"
         >
           {s.label}
         </button>

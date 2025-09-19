@@ -15,7 +15,7 @@ const ServicesHero = () => {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" /> {/* overlay */}
+        <div className="absolute inset-0 bg-black/54" /> {/* overlay */}
       </div>
 
       {/* Content */}
@@ -24,7 +24,7 @@ const ServicesHero = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-gilda mb-4"
+          className="text-6xl font-normal uppercase md:text-6xl font-gilda mb-4"
         >
           Services
         </motion.h1>
@@ -33,7 +33,7 @@ const ServicesHero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="max-w-3xl text-gray-200 leading-relaxed text-sm md:text-base"
+          className="max-w-7xl text-[#F1F1F1] leading-relaxed lg:text-xl font-normal font-general md:text-base text-center sm:text-base"
         >
           At Pacific Pearl Hotels, we combine deep industry expertise with a
           hands-on ownership approach to unlock value, revive operations, and

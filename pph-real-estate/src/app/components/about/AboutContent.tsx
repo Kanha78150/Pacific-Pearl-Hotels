@@ -6,7 +6,7 @@ import AboutSidebar from "./AboutSidebar";
 
 export default function AboutContent() {
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 flex flex-col md:flex-row gap-10">
+    <div className="bg-[#FAFAFA] max-w-7xl mx-auto px-6 md:px-8 py-12 flex flex-col md:flex-row gap-10">
       {/* Sidebar */}
       <aside className="w-full md:w-1/4">
         <AboutSidebar />
@@ -22,10 +22,10 @@ export default function AboutContent() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-blue-800 mb-4 pl-3 border-l-4 border-blue-500">
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
             Our Mission
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             Based in San Diego, California, Pacific Pearl Hotels (PPH) is one of
             the nation's largest independent hotel companies. PPH owns and/or
             operates 23 lodging properties, encompassing over 6,500 rooms and
@@ -50,11 +50,11 @@ export default function AboutContent() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-gray-900 mb-6 pl-3 border-l-4 border-black">
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
             The Leadership Strength of PPH
           </h2>
           <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="flex-1 text-gray-700 leading-relaxed space-y-4">
+            <div className="flex-1 text-[#393939] text-xl font-normal font-general leading-relaxed space-y-4">
               <p>
                 Michael Gallegos, CHA, is the President and CEO of Pacific Pearl
                 Hotels, LLC (PPH), based in San Diego. Since its founding, PPH
@@ -76,18 +76,21 @@ export default function AboutContent() {
                 of San Diego School of Business.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white border border-[#E1E1E1] p-3 inline-block">
               <Image
                 src="/images/ceo.png"
                 alt="Michael Gallegos"
                 width={200}
                 height={220}
-                className="rounded-md shadow-lg mx-auto"
+                className="object-cover"
               />
-              <p className="mt-3 font-semibold">Michael Gallegos</p>
-              <p className="text-sm text-gray-600">CHA is President and CEO</p>
-              <p className="text-sm text-gray-600">
-                {" "}
+              <p className="mt-2 font-semibold text-lg font-general">
+                Michael Gallegos
+              </p>
+              <p className="font-normal font-general text-[#000000] text-lg">
+                CHA is President and CEO
+              </p>
+              <p className="text-sm text-[#393939] font-normal font-general">
                 Pacific Pearl Hotels, LLC (PPH).
               </p>
             </div>
@@ -101,13 +104,13 @@ export default function AboutContent() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-8 border border-[#E7E7E7] p-6 bg-white"
         >
           <div>
-            <h3 className="text-lg font-bold mb-3 pl-3 border-l-4 border-blue-500">
+            <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
               Financial Strength
             </h3>
-            <p className="text-gray-700">
+            <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
               Pacific Pearl Hotels partners with opportunistic, quality-oriented
               investment capital institutions and high net worth individuals.
               Previous and current partners include Morgan Stanley, Merrill
@@ -116,22 +119,42 @@ export default function AboutContent() {
               Management.
             </p>
           </div>
+        </motion.section>
+
+        <motion.section
+          id="strengths"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-8 border border-[#E7E7E7] p-6 bg-white"
+        >
           <div>
-            <h3 className="text-lg font-bold mb-3 pl-3 border-l-4 border-blue-500">
+            <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
               Balanced Focus
             </h3>
-            <p className="text-gray-700">
+            <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
               Pacific Pearl Hotel's philosophy is to challenge, motivate,
               inspire and reward our associates. We pride ourselves in providing
               the best care for our guests, and creating the most positive and
               memorable experiences possible for all of our associates.
             </p>
           </div>
+        </motion.section>
+
+        <motion.section
+          id="strengths"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-8 border border-[#E7E7E7] p-6 bg-white"
+        >
           <div>
-            <h3 className="text-lg font-bold mb-3 pl-3 border-l-4 border-blue-500">
+            <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
               Industry Relationships
             </h3>
-            <p className="text-gray-700">
+            <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
               In addition to building a successful network of independent
               hotels, boutique properties & resorts, Pacific Pearl Hotels has
               developed long-term relationships with internationally recognized
@@ -151,34 +174,65 @@ export default function AboutContent() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl font-bold text-blue-800 mb-6 pl-3 border-l-4 border-blue-500">
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
             PPH National Recognition
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { rank: "6th", desc: "Ranked 6th of the Top 100 Independent..." },
+              {
+                rank: "6th",
+                desc: "Ranked 6th of the Top 100 independent, Third-Party Management Companies as listed in the March 2009 issue of Hotel & Motel Magazine",
+              },
               {
                 rank: "16th",
-                desc: "Ranked 16th of the Top 100 Management...",
+                desc: "Ranked 16th of the Top 100 Management Companies as listed in the April 2009 issue of Hotel Business Magazine",
               },
               {
                 rank: "14th",
-                desc: "Ranked 14th of the Top 25 Hotel Owners...",
+                desc: "Ranked 14th of the Top 25 Hotel Owners as listed in the July 2008 issue of the National Real Estate Investor Magazine",
               },
               {
                 rank: "12th",
-                desc: "Ranked 12th of the Top 100 Developers...",
+                desc: "Ranked 12th of the top 100 Owners & Developers in the United States as listed in this September 2007 issue of Hotel Business Magazine",
               },
             ].map((item, idx) => (
-              <div
+              <motion.div
                 key={idx}
-                className="border rounded-lg p-6 shadow hover:shadow-lg transition bg-white"
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="border border-[#CC9500] p-7 shadow hover:shadow-lg transition bg-[#FFFDF6] 
+                 flex flex-col justify-between h-full overflow-y-hidden"
               >
-                <p className="text-yellow-600 text-3xl font-bold">
-                  {item.rank}
+                <div className="flex items-center justify-center space-x-2">
+                  {/* Left Laurel */}
+                  <Image
+                    src="/images/Vector.svg"
+                    alt="Left Laurel"
+                    width={60}
+                    height={60}
+                  />
+
+                  {/* Rank Number */}
+                  <p className="text-yellow-600 text-3xl font-bold font-general">
+                    {item.rank}
+                  </p>
+
+                  {/* Right Laurel (mirrored) */}
+                  <Image
+                    src="/images/Vector.svg"
+                    alt="Right Laurel"
+                    width={60}
+                    height={60}
+                    className="scale-x-[-1]"
+                  />
+                </div>
+
+                <p className="mt-2 text-[#282828] text-lg font-normal font-general text-center overflow-auto">
+                  {item.desc}
                 </p>
-                <p className="mt-2 text-gray-700 text-sm">{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.section>
@@ -192,10 +246,10 @@ export default function AboutContent() {
           viewport={{ once: true }}
           className="space-y-4"
         >
-          <h2 className="text-lg font-bold pl-3 border-l-4 border-blue-500">
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
             Employee Relations
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             Michael Gallegos, CHA, is the President and CEO of Pacific Pearl
             Hotels, LLC (PPH), based in San Diego. Since its founding, PPH has
             acquired over $3.5 billion in hotels and resorts across the U.S.,
@@ -204,7 +258,7 @@ export default function AboutContent() {
             includes both independent and branded hotels, with affiliations
             spanning major brands like Marriott, Hilton, Hyatt, and Wyndham.
           </p>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             Gallegos earned his Bachelor's degree from the University of New
             Mexico, where he served as Student Body President. He also led the
             American Student Association, representing six million students
@@ -229,7 +283,7 @@ export default function AboutContent() {
           <h2 className="text-lg font-bold mb-4 pl-3 border-l-4 border-blue-500">
             Corporate Citizenship
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             At Pacific Pearl Hotels, we take citizenship very seriously. We
             firmly believe it is our responsibility to give back to our
             community; thus, Pacific Pearl Hotels contributes annually through

@@ -55,8 +55,18 @@ const AssociationsPortfolio = () => {
       </div>
 
       {/* Portfolio */}
-      <div className="bg-gradient-to-b from-[#001229] to-[#000000] text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Portfolio */}
+      <div className="relative bg-gradient-to-b from-[#001229] to-[#000000] text-white py-20 px-6 overflow-hidden">
+        {/* Background SVG */}
+        <Image
+          src="/images/Circle.svg"
+          alt="Background Decoration"
+          width={600}
+          height={600}
+          className="absolute top-0 left-0 opacity-20 pointer-events-none select-none"
+        />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -84,14 +94,14 @@ const AssociationsPortfolio = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             viewport={{ once: true }}
-            className="px-6 py-3 border border-gray-400 hover:bg-white hover:text-black transition"
+            className="px-6 py-3 border border-[#BDA078] text-[#BDA078] hover:bg-[#BDA078] hover:text-white transition text-base font-medium font-general"
           >
             Learn More
           </motion.button>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto mt-16 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto mt-16 text-center relative z-10">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
