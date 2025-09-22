@@ -1,5 +1,5 @@
-import HotelCard from "../components/hotels/HotelCard";
-import HotelHero from "../components/hotels/HotelHero";
+import HotelCard from "../../../components/hotels/HotelCard";
+import HotelHero from "../../../components/hotels/HotelHero";
 
 const Hotelspage = () => {
   return (

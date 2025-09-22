@@ -1,45 +1,37 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/footer";
+import { Gilda_Display } from "next/font/google";
+import Navbar from "../../components/layout/Navbar";
+import Footer from "../../components/layout/footer";
+import ClientWrapper from "../../components/layout/ClientWrapper";
 
+// Local Fonts
 const generalSans = localFont({
   src: [
     {
-      path: "../../public/Font/GeneralSans_Complete/Fonts/OTF/GeneralSans-Regular.otf",
+      path: "../../public/fonts/GeneralSans-Regular.otf",
       weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/GeneralSans-Bold.otf",
+      weight: "700",
       style: "normal",
     },
   ],
   variable: "--font-general-sans",
 });
 
-const gildaDisplay = localFont({
-  src: [
-    {
-      path: "../../public/Font/Gilda_Display/GildaDisplay-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-gilda-display",
-});
-
 const satoshi = localFont({
   src: [
     {
-      path: "../../public/Font/Satoshi_Complete/Fonts/OTF/Satoshi-Light.otf",
+      path: "../../public/fonts/Satoshi-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/Font/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/Font/Satoshi_Complete/Fonts/OTF/Satoshi-Bold.otf",
+      path: "../../public/fonts/Satoshi-Bold.otf",
       weight: "700",
       style: "normal",
     },
@@ -47,9 +39,78 @@ const satoshi = localFont({
   variable: "--font-satoshi",
 });
 
+const gilda = Gilda_Display({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-gilda-display",
+});
+
 export const metadata: Metadata = {
-  title: "Real Estate - PPH",
-  description: "Frontend built with Next.js, TypeScript, and Tailwind CSS",
+  title: "Pacific Pearl Hotels Real Estate | Luxury Properties & Investments",
+  description:
+    "Discover premium real estate and hospitality investments with Pacific Pearl Hotels (PPH). Explore luxury hotels, resorts, and properties designed for comfort, elegance, and high returns across the United States.",
+
+  keywords: [
+    "Real Estate",
+    "Luxury Hotels",
+    "Hotel Investments",
+    "Hospitality Real Estate",
+    "PPH Properties",
+    "Pacific Pearl Hotels",
+    "Commercial Real Estate",
+    "Luxury Resorts",
+    "Property Investment",
+  ],
+
+  authors: [{ name: "Pacific Pearl Hotels" }],
+  creator: "Pacific Pearl Hotels",
+  publisher: "Pacific Pearl Hotels",
+
+  icons: {
+    icon: [
+      {
+        url: "/images/favicon/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/images/favicon/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/images/favicon/favicon.ico",
+    apple: "/images/favicon/apple-touch-icon.png",
+  },
+  // Open Graph (Facebook, LinkedIn)
+  openGraph: {
+    type: "website",
+    url: "https://www.pph-realestate.com", // replace with your real domain
+    title: "Pacific Pearl Hotels Real Estate | Luxury Properties & Investments",
+    description:
+      "Pacific Pearl Hotels (PPH) offers world-class real estate and hospitality investments across the United States. Explore our portfolio of luxury hotels, resorts, and properties.",
+    siteName: "Pacific Pearl Hotels",
+    images: [
+      {
+        url: "/images/og-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pacific Pearl Hotels Real Estate",
+      },
+    ],
+  },
+
+  // Twitter (X)
+  twitter: {
+    card: "summary_large_image",
+    title: "Pacific Pearl Hotels Real Estate | Luxury Properties & Investments",
+    description:
+      "Explore luxury real estate & hospitality assets with Pacific Pearl Hotels. Hotels, resorts & premium properties for investors & travelers.",
+    images: ["/images/og-banner.jpg"],
+    creator: "@YourTwitterHandle",
+  },
+
+  themeColor: "#001229",
 };
 
 export default function RootLayout({
@@ -60,12 +121,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${generalSans.variable} ${gildaDisplay.variable} ${satoshi.variable}`}
+      className={`${generalSans.variable} ${satoshi.variable} ${gilda.variable}`}
     >
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <ClientWrapper>
+          <Navbar />
+          {children}
+          <Footer />
+        </ClientWrapper>
       </body>
     </html>
   );

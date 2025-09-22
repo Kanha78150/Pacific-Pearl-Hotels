@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+:root {
+  --font-general-sans: "GeneralSans", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-gilda-display: "Gilda Display", serif;
+}
+
+.font-general {
+  font-family: var(--font-general-sans);
+}
+
+.font-satoshi {
+  font-family: var(--font-satoshi);
+}
+
+.font-gilda {
+  font-family: var(--font-gilda-display);
+}
