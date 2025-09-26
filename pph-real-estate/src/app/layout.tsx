@@ -82,35 +82,6 @@ export const metadata: Metadata = {
     shortcut: "/images/favicon/favicon.ico",
     apple: "/images/favicon/apple-touch-icon.png",
   },
-  // Open Graph (Facebook, LinkedIn)
-  openGraph: {
-    type: "website",
-    url: "https://www.pph-realestate.com", // replace with your real domain
-    title: "Pacific Pearl Hotels Real Estate | Luxury Properties & Investments",
-    description:
-      "Pacific Pearl Hotels (PPH) offers world-class real estate and hospitality investments across the United States. Explore our portfolio of luxury hotels, resorts, and properties.",
-    siteName: "Pacific Pearl Hotels",
-    images: [
-      {
-        url: "/images/og-banner.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Pacific Pearl Hotels Real Estate",
-      },
-    ],
-  },
-
-  // Twitter (X)
-  twitter: {
-    card: "summary_large_image",
-    title: "Pacific Pearl Hotels Real Estate | Luxury Properties & Investments",
-    description:
-      "Explore luxury real estate & hospitality assets with Pacific Pearl Hotels. Hotels, resorts & premium properties for investors & travelers.",
-    images: ["/images/og-banner.jpg"],
-    creator: "@YourTwitterHandle",
-  },
-
-  themeColor: "#001229",
 };
 
 export default function RootLayout({

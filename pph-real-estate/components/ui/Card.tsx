@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -12,6 +11,8 @@ interface CardProps {
   rating: string;
   rooms: number;
   image: string;
+  link: string;
+  status: string;
 }
 
 export default function Card({
@@ -21,6 +22,8 @@ export default function Card({
   rating,
   rooms,
   image,
+  link,
+  status,
 }: CardProps) {
   return (
     <motion.div
@@ -28,10 +31,10 @@ export default function Card({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="shadow-lg border-1 border-[#EEEEEE] bg-[#FFFFFF] overflow-hidden flex flex-col p-3"
+      className="shadow-lg border border-[#EEEEEE] bg-[#FFFFFF] overflow-hidden flex flex-col p-3 h-full"
     >
       {/* Optimized Next.js Image */}
-      <div className="relative w-full h-48">
+      <div className="relative w-full h-48 mb-4">
         <Image
           src={image}
           alt={name}
@@ -42,37 +45,52 @@ export default function Card({
         />
       </div>
 
-      <div className="flex-1 gap-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-xl font-medium text-[#000000] font-general mb-3">
+      {/* Content container with flex-grow to push buttons to bottom */}
+      <div className="flex-1 flex flex-col">
+        {/* Title section with consistent height */}
+        <div className="mb-4">
+          <h3 className="text-xl font-medium text-[#000000] font-general leading-tight min-h-[3rem] flex items-center">
             {name}
           </h3>
+        </div>
 
-          {/* Icons in a single row */}
-          <div className="flex flex-wrap items-center gap-4 justify-between text-[#000000] text-sm">
-            <div className="flex items-center">
-              <MapPin className="mr-1 h-4 w-4 fill-[#000000]" /> {location}
-            </div>
-            <div className="flex items-center">
-              <Star className="mr-1 h-4 w-4 fill-[#000000]" /> {rating}
-            </div>
-            <div className="flex items-center">
-              <Phone className="mr-1 h-4 w-4 fill-[#000000]" /> {phone}
-            </div>
-            <div className="flex items-center">
-              <Bed className="mr-1 h-4 w-4 fill-[#000000]" /> {rooms} Rooms
-            </div>
+        {/* Info grid - 2x2 layout for better alignment */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-1">
+          <div className="flex items-center text-[#000000] text-sm">
+            <MapPin className="mr-2 h-4 w-4 fill-[#000000] flex-shrink-0" />
+            <span className="truncate" title={location}>
+              {location}
+            </span>
+          </div>
+
+          <div className="flex items-center text-[#000000] text-sm">
+            <Star className="mr-2 h-4 w-4 fill-[#000000] flex-shrink-0" />
+            <span>{rating}</span>
+          </div>
+
+          <div className="flex items-center text-[#000000] text-sm">
+            <Phone className="mr-2 h-4 w-4 fill-[#000000] flex-shrink-0" />
+            <span className="truncate" title={phone}>
+              {phone}
+            </span>
+          </div>
+
+          <div className="flex items-center text-[#000000] text-sm">
+            <Bed className="mr-2 h-4 w-4 fill-[#000000] flex-shrink-0" />
+            <span>{rooms} Rooms</span>
           </div>
         </div>
-        <div className="flex gap-3 mt-6">
-          <span className="border-1 border-[#1B8800] px-3 py-1 text-base font-normal font-general  text-[#1B8800] bg-[#DBFFC7] text-center">
-            Current
+
+        {/* Buttons section - always at bottom */}
+        <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+          <span className="border border-[#1B8800] px-3 py-2 text-sm font-normal font-general text-[#1B8800] bg-[#DBFFC7] text-center rounded-sm flex-shrink-0">
+            {status}
           </span>
           <Link
-            href="#"
-            className="w-70 text-center px-5 py-2  bg-[#001931] text-white text-base font-normal font-general 
-             shadow-md hover:bg-[#012d5a] hover:scale-105 focus:ring-2 
-             focus:ring-offset-2 focus:ring-[#001931] transition-all duration-300 ease-in-out"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center px-5 py-2 bg-[#001931] text-white text-sm font-normal font-general rounded-sm shadow-md hover:bg-[#012d5a] hover:scale-105 focus:ring-2 focus:ring-offset-2 focus:ring-[#001931] transition-all duration-300 ease-in-out"
           >
             Visit Site
           </Link>
