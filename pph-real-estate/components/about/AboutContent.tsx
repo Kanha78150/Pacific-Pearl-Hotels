@@ -27,11 +27,11 @@ export default function AboutContent() {
           </h2>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             Based in San Diego, California, Pacific Pearl Hotels (PPH) is one of
-            the nation's largest independent hotel companies. PPH owns and/or
-            operates 23 lodging properties, encompassing over 6,500 rooms and
-            employing over 3,200 personnel throughout the United States. In
+            the nation&apos;s largest independent hotel companies. PPH owns
+            and/or operates 23 lodging properties, encompassing over 6,500 rooms
+            and employing over 3,200 personnel throughout the United States. In
             addition to overseeing a successful network of independent hotels,
-            boutique properties & resorts, Pacific Pearl Hotel's hotel brand
+            boutique properties & resorts, Pacific Pearl Hotel&apos;s brand
             affiliations have included Hyatt, Le Meridien, Marriott, Hilton,
             Crowne Plaza, DoubleTree by Hilton, Wyndham, Hilton Garden Inn,
             Radisson, Sheraton, Hampton Inn, Element, Fairfield Inn & Suites by
@@ -66,14 +66,14 @@ export default function AboutContent() {
                 Hilton, Hyatt, and Wyndham.
               </p>
               <p>
-                Gallegos earned his Bachelor's degree from the University of New
-                Mexico, where he served as Student Body President. He also led
-                the American Student Association, representing six million
-                students nationwide. Beginning his hospitality career at age
-                eleven, he is now a Certified Hotel Administrator and was named
-                Ernst & Young’s National Entrepreneur of the Year in 2004. He
-                has served on advisory boards for Wells Fargo and the University
-                of San Diego School of Business.
+                Gallegos earned his Bachelor&apos;s degree from the University
+                of New Mexico, where he served as Student Body President. He
+                also led the American Student Association, representing six
+                million students nationwide. Beginning his hospitality career at
+                age eleven, he is now a Certified Hotel Administrator and was
+                named Ernst & Young’s National Entrepreneur of the Year in 2004.
+                He has served on advisory boards for Wells Fargo and the
+                University of San Diego School of Business.
               </p>
             </div>
             <div className="text-center bg-white border border-[#E1E1E1] p-3 inline-block">
@@ -134,7 +134,7 @@ export default function AboutContent() {
               Balanced Focus
             </h3>
             <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
-              Pacific Pearl Hotel's philosophy is to challenge, motivate,
+              Pacific Pearl {"Hotel's"} philosophy is to challenge, motivate,
               inspire and reward our associates. We pride ourselves in providing
               the best care for our guests, and creating the most positive and
               memorable experiences possible for all of our associates.
@@ -259,7 +259,7 @@ export default function AboutContent() {
             spanning major brands like Marriott, Hilton, Hyatt, and Wyndham.
           </p>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            Gallegos earned his Bachelor's degree from the University of New
+            Gallegos earned his {"Bachelor's"} degree from the University of New
             Mexico, where he served as Student Body President. He also led the
             American Student Association, representing six million students
             nationwide. Beginning his hospitality career at age eleven, he is
@@ -289,7 +289,7 @@ export default function AboutContent() {
             community; thus, Pacific Pearl Hotels contributes annually through
             our corporate offices, as well as through all of our hotels
             nationwide. These contributions serve to benefit a variety of
-            social, charitable and community organizations. Our personnel's
+            social, charitable and community organizations. Our personnel&apos;s
             involvement in leadership positions within these organizations is
             just as important as our financial contributions.
           </p>

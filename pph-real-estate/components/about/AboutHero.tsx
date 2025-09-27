@@ -36,9 +36,10 @@ const AboutHero = () => {
           className="max-w-7xl text-[#F1F1F1] leading-snug lg:text-xl font-normal font-general md:text-base text-center sm:text-base"
         >
           Based in San Diego, California, Pacific Pearl Hotels (PPH) is one of
-          the nation's leading independent hotel companies. With a portfolio of
-          23 properties totaling over 6,500 rooms, PPH operates across the
-          United States and employs more than 3,200 hospitality professionals.
+          the nation&apos;s leading independent hotel companies. With a
+          portfolio of 23 properties totaling over 6,500 rooms, PPH operates
+          across the United States and employs more than 3,200 hospitality
+          professionals.
         </motion.p>
       </div>
     </section>

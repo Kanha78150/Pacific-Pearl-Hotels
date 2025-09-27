@@ -193,12 +193,12 @@ const ServicesContent = () => {
                   Centralized Accounting
                 </h3>
                 <p className="text-[#393939] text-lg font-general font-normal leading-snug">
-                  Pacific Pearl Hotels' corporate accounting team oversees all
-                  financial aspects and operating performances at each of our
-                  managed hotels. We believe centralized accounting and constant
-                  communication between property improves each hotel's
-                  performance while maintaning low cost controls. Various
-                  services include:
+                  Pacific Pearl Hotels&apos; corporate accounting team oversees
+                  all financial aspects and operating performances at each of
+                  our managed hotels. We believe centralized accounting and
+                  constant communication between property improves each
+                  hotel&apos;s performance while maintaning low cost controls.
+                  Various services include:
                 </p>
               </div>
             </div>
@@ -314,15 +314,15 @@ const ServicesContent = () => {
                 </h3>
                 <p className="text-[#393939] text-lg font-normal font-general leading-5">
                   For any hotel, revenue management is a priority. Pacific Pearl
-                  Hotels' group of revenue management experts work hand-in-hand
-                  with our property-level team to develop goals and strategies
-                  that increase market share growth and maximize revenue. We
-                  strongly believe this collaborative approach to revenue
-                  management sets us apart from the average property management
-                  company. While our corporate culture supports the initiatives
-                  of our brand partners with advancing yield and inventory
-                  pricing expertise for all distribution channels at each unique
-                  property.
+                  Hotels&apos; group of revenue management experts work
+                  hand-in-hand with our property-level team to develop goals and
+                  strategies that increase market share growth and maximize
+                  revenue. We strongly believe this collaborative approach to
+                  revenue management sets us apart from the average property
+                  management company. While our corporate culture supports the
+                  initiatives of our brand partners with advancing yield and
+                  inventory pricing expertise for all distribution channels at
+                  each unique property.
                 </p>
               </div>
             </div>
@@ -474,12 +474,12 @@ const ServicesContent = () => {
           </h2>
           <p className="text-gray-700 leading-relaxed">
             Pacific Pearl Hotels offers comprehensive consulting services to
-            help hotel owners and investors maximize their property's potential.
-            Our experienced team provides expert guidance in areas such as
-            market analysis, operational efficiency, financial performance, and
-            strategic planning. We work closely with our clients to develop
-            tailored solutions that drive growth and enhance overall asset
-            value.
+            help hotel owners and investors maximize their property&apos;s
+            potential. Our experienced team provides expert guidance in areas
+            such as market analysis, operational efficiency, financial
+            performance, and strategic planning. We work closely with our
+            clients to develop tailored solutions that drive growth and enhance
+            overall asset value.
           </p>
 
           <div className="space-y-6">
