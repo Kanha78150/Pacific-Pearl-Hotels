@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Variants } from "framer-motion";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,34 +39,42 @@ const Navbar = () => {
   }, [mobileMenuOpen]);
 
   // Framer Motion variants (fixed with cubic-bezier easing arrays)
-  const navItemVariants = {
+  const navItemVariants: Variants = {
     hidden: { opacity: 0, y: -20 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.15, duration: 0.5, ease: [0.42, 0, 1, 1] }, // easeOut
+      transition: {
+        delay: i * 0.15,
+        duration: 0.5,
+        ease: [0.42, 0, 1, 1] as const, // 👈 mark as const
+      },
     }),
   };
 
-  const mobileMenuVariants = {
+  const mobileMenuVariants: Variants = {
     hidden: {
       opacity: 0,
       height: 0,
-      transition: { duration: 0.3, ease: [0.42, 0, 0.58, 1] }, // easeInOut
+      transition: { duration: 0.3, ease: [0.42, 0, 0.58, 1] as const },
     },
     visible: {
       opacity: 1,
       height: "auto",
-      transition: { duration: 0.3, ease: [0.42, 0, 0.58, 1] }, // easeInOut
+      transition: { duration: 0.3, ease: [0.42, 0, 0.58, 1] as const },
     },
   };
 
-  const mobileItemVariants = {
+  const mobileItemVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: i * 0.1, duration: 0.3, ease: [0.42, 0, 1, 1] }, // easeOut
+      transition: {
+        delay: i * 0.1,
+        duration: 0.3,
+        ease: [0.42, 0, 1, 1] as const,
+      },
     }),
   };
 
