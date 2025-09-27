@@ -37,13 +37,13 @@ const Navbar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [mobileMenuOpen]);
 
-  // Framer Motion variants
+  // Framer Motion variants (fixed with cubic-bezier easing arrays)
   const navItemVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" },
+      transition: { delay: i * 0.15, duration: 0.5, ease: [0.42, 0, 1, 1] }, // easeOut
     }),
   };
 
@@ -51,12 +51,12 @@ const Navbar = () => {
     hidden: {
       opacity: 0,
       height: 0,
-      transition: { duration: 0.3, ease: "easeInOut" },
+      transition: { duration: 0.3, ease: [0.42, 0, 0.58, 1] }, // easeInOut
     },
     visible: {
       opacity: 1,
       height: "auto",
-      transition: { duration: 0.3, ease: "easeInOut" },
+      transition: { duration: 0.3, ease: [0.42, 0, 0.58, 1] }, // easeInOut
     },
   };
 
@@ -65,7 +65,7 @@ const Navbar = () => {
     visible: (i: number) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: i * 0.1, duration: 0.3, ease: "easeOut" },
+      transition: { delay: i * 0.1, duration: 0.3, ease: [0.42, 0, 1, 1] }, // easeOut
     }),
   };
 
@@ -105,7 +105,7 @@ const Navbar = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.6, duration: 0.6, ease: [0.42, 0, 1, 1] }} // easeOut
             className="absolute left-1/2 transform -translate-x-1/2"
           >
             <Link href="/">
@@ -124,7 +124,7 @@ const Navbar = () => {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.8, duration: 0.6, ease: [0.42, 0, 1, 1] }} // easeOut
             className="flex items-center gap-4 text-base relative font-general font-normal"
           >
             {/* Language Dropdown */}
@@ -187,7 +187,7 @@ const Navbar = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.5, ease: [0.42, 0, 1, 1] }} // easeOut
           >
             <Link href="/">
               <Image
@@ -250,7 +250,7 @@ const Navbar = () => {
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
+              transition={{ delay: 0.4, duration: 0.5, ease: [0.42, 0, 1, 1] }} // easeOut
               onClick={(e) => {
                 e.stopPropagation();
                 setMobileMenuOpen(!mobileMenuOpen);
