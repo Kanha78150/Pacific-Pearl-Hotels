@@ -78,7 +78,7 @@ export default function AboutContent() {
             </div>
             <div className="text-center bg-white border border-[#E1E1E1] p-3 inline-block">
               <Image
-                src="/images/ceo.png"
+                src="/images/CEO.png"
                 alt="Michael Gallegos"
                 width={200}
                 height={220}
