@@ -3,24 +3,43 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Users,
+  ConciergeBell,
+  Bed,
+  Ruler,
+} from "lucide-react";
 
 const features = [
   {
     image: "/images/standout/slide1.jpg",
+    icon: Users,
     title: "People-Powered Excellence",
+    description:
+      "Delivering unforgettable guest experiences through passionate and dedicated teams",
   },
   {
     image: "/images/standout/slide2.jpg",
-    title: "Innovative Designs That Inspire and Engage",
+    icon: Bed,
+    title: "Creating Unforgettable Moments for Every Guest",
+    description:
+      "We focus on exceptional experiences that leave lasting impressions.",
   },
   {
     image: "/images/standout/slide3.jpg",
+    icon: ConciergeBell,
     title: "Heartfelt Service That Makes a Difference",
+    description:
+      "We believe in hospitality that connects with guests on a personal level.",
   },
   {
     image: "/images/standout/slide4.jpg",
-    title: "Heartfelt Service That Makes a Difference",
+    icon: Ruler,
+    title: "Innovative Designs That Inspire and Engage",
+    description:
+      "Our design-driven approach creates memorable experiences that resonate.",
   },
 ];
 
@@ -29,9 +48,9 @@ const WhyWeStandOut = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (sliderRef.current) {
-      const scrollAmount = 400; // adjust slide width
+      const slideWidth = sliderRef.current.clientWidth;
       sliderRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
+        left: direction === "left" ? -slideWidth : slideWidth,
         behavior: "smooth",
       });
     }
@@ -65,7 +84,7 @@ const WhyWeStandOut = () => {
         {/* Cards Container */}
         <div
           ref={sliderRef}
-          className="flex overflow-x-hidden overflow-y-hidden no-scrollbar scroll-smooth"
+          className="flex overflow-x-hidden overflow-y-hidden no-scrollbar scroll-smooth snap-x snap-mandatory"
         >
           {features.map((item, index) => (
             <motion.div
@@ -74,19 +93,34 @@ const WhyWeStandOut = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative min-w-[300px] md:min-w-[300px] lg:min-w-[300px] overflow-hidden"
+              className="relative snap-center min-w-full sm:min-w-[300px] lg:min-w-[300px] overflow-hidden group"
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={600}
-                height={400}
-                className="w-full h-[400px] object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-end">
-                <p className="text-white p-4 text-lg font-medium">
+              {/* Base Image + Bottom Title */}
+              <div className="group-hover:opacity-0 transition-opacity duration-500">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-[400px] object-cover"
+                />
+                <div className="absolute bottom-0 left-0 w-full bg-black/40 p-3">
+                  <p className="text-white text-lg font-medium">{item.title}</p>
+                </div>
+              </div>
+
+              {/* Overlay (only visible on hover) */}
+              <div
+                className="absolute inset-0 bg-[#01172C] flex flex-col items-center justify-center text-center px-6 py-8 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                <div className="bg-white text-black p-3 rounded-full mb-4">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-white text-xl font-semibold mb-2">
                   {item.title}
-                </p>
+                </h3>
+                <p className="text-gray-300 text-sm">{item.description}</p>
               </div>
             </motion.div>
           ))}

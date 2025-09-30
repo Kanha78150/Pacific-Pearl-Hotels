@@ -4,10 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "1%", label: "Customer Satisfaction Rate" },
-  { value: "1%", label: "Occupancy Rate Achieved" },
-  { value: "1%", label: "Revenue Growth Yearly" },
-  { value: "1%", label: "Repeat Guest Rate" },
+  { value: "87%", label: "Customer Satisfaction Rate" },
+  { value: "56%", label: "Occupancy Rate Achieved" },
+  { value: "87%", label: "Revenue Growth Yearly" },
+  { value: "77%", label: "Repeat Guest Rate" },
 ];
 
 const logos = [

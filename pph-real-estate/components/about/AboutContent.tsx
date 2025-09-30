@@ -26,19 +26,25 @@ export default function AboutContent() {
             Our Mission
           </h2>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            Based in San Diego, California, Pacific Pearl Hotels (PPH) is one of
-            the nation&apos;s largest independent hotel companies. PPH owns
-            and/or operates 23 lodging properties, encompassing over 6,500 rooms
-            and employing over 3,200 personnel throughout the United States. In
-            addition to overseeing a successful network of independent hotels,
-            boutique properties & resorts, Pacific Pearl Hotel&apos;s brand
-            affiliations have included Hyatt, Le Meridien, Marriott, Hilton,
-            Crowne Plaza, DoubleTree by Hilton, Wyndham, Hilton Garden Inn,
-            Radisson, Sheraton, Hampton Inn, Element, Fairfield Inn & Suites by
-            Marriott, Wyndham Garden, Four Points by Sheraton, La Quinta, Park
-            Plaza, Park Inn & Suites by Radisson, Country Inn & Suites,
-            Staybridge Suites, Holiday Inn, Holiday Inn Express, and Best
-            Western.
+            At Pacific Pearl Hotels, our mission is to reimagine hotel
+            management by blending timeless hospitality with forward-thinking
+            innovation. We create spaces that honor local culture, elevate guest
+            wellbeing, and deliver lasting value for owners and partners. Guided
+            by sustainability, empowered by technology and data, and inspired by
+            our deep hospitality roots, we aim to be more than operators — we
+            are storytellers of place, architects of experience, and stewards of
+            long-term growth.
+          </p>
+          <h3 className="text-lg font-medium font-general text-[#000000] my-3">
+            Our History
+          </h3>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            As a company that owns and operates hotels, Pacific Pearl Hotels
+            brings a unique and experienced perspective to managing hotels. We
+            identify opportunities for growth and formulate solutions to provide
+            our partners with rapid operational revival. Our work with our
+            partners results in improved cash flow, profitability and stabilized
+            performance throughout our portfolio.
           </p>
         </motion.section>
 
@@ -250,25 +256,13 @@ export default function AboutContent() {
             Employee Relations
           </h2>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            Michael Gallegos, CHA, is the President and CEO of Pacific Pearl
-            Hotels, LLC (PPH), based in San Diego. Since its founding, PPH has
-            acquired over $3.5 billion in hotels and resorts across the U.S.,
-            Spain, and Mexico. The company owns and operates 23 properties with
-            over 6,500 rooms and employs more than 3,200 people. Its portfolio
-            includes both independent and branded hotels, with affiliations
-            spanning major brands like Marriott, Hilton, Hyatt, and Wyndham.
-          </p>
-          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            Gallegos earned his {"Bachelor's"} degree from the University of New
-            Mexico, where he served as Student Body President. He also led the
-            American Student Association, representing six million students
-            nationwide. Beginning his hospitality career at age eleven, he is
-            now a Certified Hotel Administrator and was named Ernst & Young’s
-            National Entrepreneur of the Year in 2004. He has served on advisory
-            boards for Wells Fargo and the University of San Diego School of
-            Business. <br /> Michael Gallegos <br /> CHA is President and CEO{" "}
-            <br />
-            Pacific Pearl Hotels, LLC (PPH).
+            We aim to maintain an environment that nurtures and enhances the
+            skills and creativity that each of our employees brings. We
+            understand that honesty, openness, recognition and trust must exist
+            to ensure our success as a corporation and as individuals. The
+            philosophies we operate under at Pacific Pearl Hotels help our
+            personnel to stay highly motivated, secure in their environment and
+            confident in their abilities to perform.
           </p>
         </motion.section>
 
@@ -280,7 +274,7 @@ export default function AboutContent() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-lg font-bold mb-4 pl-3 border-l-4 border-blue-500">
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
             Corporate Citizenship
           </h2>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
