@@ -318,13 +318,13 @@ const Navbar = () => {
                 variants={mobileItemVariants}
                 className="pt-4 border-t border-white/10"
               >
-                <a
+                <Link
                   href="tel:+12375648970"
                   className="flex items-center gap-3 py-3 px-4 text-lg text-white hover:bg-white/5 rounded-lg transition-colors duration-300"
                 >
                   <span className="text-2xl">📞</span>
                   +123 7564 8970
-                </a>
+                </Link>
               </motion.div>
             </div>
           </motion.div>

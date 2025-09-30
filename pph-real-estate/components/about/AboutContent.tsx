@@ -172,6 +172,33 @@ export default function AboutContent() {
           </div>
         </motion.section>
 
+        {/* Brand Expertise */}
+        <motion.section
+          id="brand-expertise"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-4"
+        >
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
+            Brand Expertise
+          </h2>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            Pacific Pearl Hotels is a third-party, brand-approved management
+            company with the proven ability to operate leading global
+            hospitality brands, including Hilton, Marriott, IHG, and more. Our
+            expertise spans luxury five-star resorts and spas, full-service
+            hotels, select-service properties, and extended-stay accommodations.
+            With a strong track record across California, New Mexico, Texas,
+            Arizona, Las Vegas, and Mexico, we are recognized as a premier
+            operator in the Southwest and beyond. Building on this foundation,
+            we are expanding internationally to dynamic destinations such as
+            Spain and the Maldives, bringing our hands-on approach, operational
+            excellence, and guest-first philosophy to each property we manage.
+          </p>
+        </motion.section>
+
         {/* Recognition */}
         <motion.section
           id="recognition"
@@ -245,7 +272,7 @@ export default function AboutContent() {
 
         {/* Employee Relations */}
         <motion.section
-          id="employee"
+          id="employee-relations"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -264,6 +291,75 @@ export default function AboutContent() {
             personnel to stay highly motivated, secure in their environment and
             confident in their abilities to perform.
           </p>
+        </motion.section>
+
+        {/* Sustainability */}
+        <motion.section
+          id="sustainability"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-4"
+        >
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
+            Sustainability at Pacific Pearl Hotels
+          </h2>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            At Pacific Pearl Hotels, sustainability is not just an initiative —
+            it’s at the heart of how we do business. We are committed to
+            creating unforgettable guest experiences while protecting the planet
+            we all share. Our hotels reduce energy and water consumption through
+            innovative technologies, minimize single-use plastics, and support
+            local farmers and artisans to celebrate the culture of the
+            communities we serve. With wellness-focused amenities, eco-friendly
+            design, and a dedication to continuous improvement, we align guest
+            wellbeing with environmental stewardship. As we expand globally, we
+            remain guided by integrity, accountability, and a vision for growth
+            with responsibility — ensuring every property we manage contributes
+            to a healthier planet and stronger communities.
+          </p>
+        </motion.section>
+
+        {/* Technology & Data */}
+        <motion.section
+          id="technology-data"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-4"
+        >
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
+            Technology & Data
+          </h2>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            At Pacific Pearl Hotels, we leverage the latest hospitality
+            technology to optimize every aspect of the guest journey and enhance
+            operational efficiency. From digital platforms that simplify booking
+            and elevate the on-property experience to smart systems that
+            streamline internal processes, we use innovation to deliver
+            seamless, memorable stays. Our approach is deeply data-driven —
+            guiding decisions with real insights to maximize performance,
+            profitability, and guest satisfaction. Always open to collaboration,
+            we welcome partnerships with technology leaders to stay at the
+            forefront of hospitality innovation and drive measurable results for
+            our owners and stakeholders.
+          </p>
+          <div className="space-y-2 pl-4">
+            <h3 className="text-lg font-medium font-general text-[#000000]">
+              Case Studies
+            </h3>
+            <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+              Our track record speaks through the performance of the hotels we
+              manage. From repositioning underperforming assets to driving
+              market-leading results in luxury, select service, and extended
+              stay segments, Pacific Pearl Hotels consistently delivers
+              measurable success. While many of our case studies are tailored
+              for private discussions, we welcome you to reach out directly for
+              detailed examples of our performance, strategies, and results.
+            </p>
+          </div>
         </motion.section>
 
         {/* Corporate Citizenship */}
