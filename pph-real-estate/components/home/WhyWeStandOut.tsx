@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ChevronLeft,
   ChevronRight,
@@ -55,6 +56,25 @@ const WhyWeStandOut = () => {
       });
     }
   };
+  const email = "ariana@pacificpearlhotels.com";
+  const subject = "Joining Inquiry";
+  const body = `Hello,
+I am interested in joining.
+Please provide more details.`;
+
+  const encodedSubject = encodeURIComponent(subject);
+  const encodedBody = encodeURIComponent(body);
+
+  const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent =
+      typeof navigator === "undefined" ? "" : navigator.userAgent;
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+  }, []);
 
   return (
     <section className="py-16 px-3 md:px-9 lg:px-1 relative">
@@ -74,9 +94,26 @@ const WhyWeStandOut = () => {
           our properties. We leverage data-driven strategies to maximize returns
           and enhance guest satisfaction.
         </p>
-        <button className="border border-[#010407] px-6 py-2 hover:bg-black hover:text-white transition font-general font-medium">
-          Join Us
-        </button>
+        {/* Smart Join Us Button */}
+        {isMobile ? (
+          <Link
+            href={mailtoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#010407] px-6 py-2 hover:bg-black hover:text-white transition font-general font-medium"
+          >
+            Join Us
+          </Link>
+        ) : (
+          <Link
+            href={gmailLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#010407] px-6 py-2 hover:bg-black hover:text-white transition font-general font-medium"
+          >
+            Join Us
+          </Link>
+        )}
       </motion.div>
 
       {/* Slider Section */}

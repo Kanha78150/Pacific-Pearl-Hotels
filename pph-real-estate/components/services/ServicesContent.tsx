@@ -58,7 +58,7 @@ const ServicesContent = () => {
           </h2>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             At Pacific Pearl Hotels, we pride ourselves in the lasting
-            relationships we have built and continue to nurture during our 25
+            relationships we have built and continue to nurture during our 35
             years in the hospitality industry. As a company that owns and
             operates hotels, Pacific Pearl Hotels brings a unique and
             experienced perspective to managing hotels. We identify
@@ -66,6 +66,40 @@ const ServicesContent = () => {
             partners with rapid operational revival. Our work with our partners
             results in improved cash flow, profitability and stabilized
             performance throughout our portfolio.
+          </p>
+        </motion.section>
+
+        {/* Our Mission */}
+        <motion.section
+          id="mission"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
+            Our Mission
+          </h2>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            At Pacific Pearl Hotels, our mission is to reimagine hotel
+            management by blending timeless hospitality with forward-thinking
+            innovation. We create spaces that honor local culture, elevate guest
+            wellbeing, and deliver lasting value for owners and partners. Guided
+            by sustainability, empowered by technology and data, and inspired by
+            our deep hospitality roots, we aim to be more than operators — we
+            are storytellers of place, architects of experience, and stewards of
+            long-term growth.
+          </p>
+          <h3 className="text-lg font-medium font-general text-[#000000] my-3">
+            Our History
+          </h3>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            As a company that owns and operates hotels, Pacific Pearl Hotels
+            brings a unique and experienced perspective to managing hotels. We
+            identify opportunities for growth and formulate solutions to provide
+            our partners with rapid operational revival. Our work with our
+            partners results in improved cash flow, profitability and stabilized
+            performance throughout our portfolio.
           </p>
         </motion.section>
 
@@ -85,11 +119,11 @@ const ServicesContent = () => {
 
           {/* Full width description */}
           <div className="space-y-4">
-            <p className="text-[#393939] text-xl font-normal font-general leading-tight">
+            <p className="text-[#393939] text-xl font-normal font-general leading=relaxed">
               Pacific Pearl Hotels, LLC is approved and preferred
               internationally by recognized hotel companies. Pacific Pearl
               Hotels serves as a hotel owner, operator and 3rd party management
-              for 123 hotel transactions, many of advanced to win franchise
+              for 134 hotel transactions, many of advanced to win franchise
               honors in their respected markets.
             </p>
             <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
@@ -101,7 +135,8 @@ const ServicesContent = () => {
               agreements, property improvement plans, and revenue strategies
               during acquisition. Pacific Pearl Hotels recognizes that each
               acquisition is unique, and we are prepared to construct a plan of
-              action that fits the acquisition in question.
+              action that fits the acquisition in question. We specialize in
+              select service and extended stay hotel operations.
             </p>
           </div>
 
@@ -159,7 +194,7 @@ const ServicesContent = () => {
                   Handbook policy, procedure and development
                 </span>
                 <span className="bg-[#F7FBFF] px-2 py-2 border-1 border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center w-fit">
-                  Maintain employee records
+                  Maintenance of employee records.
                 </span>
               </div>
 
@@ -234,7 +269,16 @@ const ServicesContent = () => {
                   Accounts Distribution
                 </span>
                 <span className="bg-[#F7FBFF] px-4 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium inline-flex items-center">
-                  General Lender Analysis
+                  Lender Compliance & Lender Analysis
+                </span>
+              </div>
+              {/* Fourth row: 2 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <span className="bg-[#F7FBFF] px-4 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium inline-flex items-center">
+                  Monthly and Quarterly Income and Expense Statements
+                </span>
+                <span className="bg-[#F7FBFF] px-4 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium inline-flex items-center">
+                  Accounts Payable and Receivable Focus
                 </span>
               </div>
             </div>
@@ -259,17 +303,17 @@ const ServicesContent = () => {
                 <h3 className="text-xl text-[#393939] font-medium font-general mb-3 ">
                   Food & Beverage
                 </h3>
-                <p className="text-[#393939] text-lg font-general font-normal leading-4">
+                <p className="text-[#393939] text-lg font-general font-normal leading-snug">
                   Whether our food and beverage department addresses room
                   service, lounge, restaurant or catering events, Pacific Pearl
-                  Hotels LLC understands that the key to successful operations
-                  is grounded in exceptional customer service. We strive to
+                  Hotels understands that the key to successful operations is
+                  grounded in exceptional customer service. We strive to
                   constantly exceed the guest’s expectations by focusing on high
-                  quality ingredients and guest service. Our corporate team and
-                  property managers monitor daily food and beverage performance
-                  through reporting systems for revenue, expense, ordering and
-                  labor to met with brand established standards and our own
-                  quality control.
+                  quality ingredients and guest service. High-quality and
+                  natural ingredients. Our corporate team and property managers
+                  monitor daily food and beverage performance through reporting
+                  systems for revenue, expense, ordering and labor to met with
+                  brand established standards and our own quality control.
                 </p>
               </div>
             </div>
@@ -306,11 +350,8 @@ const ServicesContent = () => {
 
               {/* Right: Text */}
               <div className="flex-1">
-                <h3
-                  className="text-xl font-medium font-gene
-                mb-2 text-[#393939]"
-                >
-                  Revenue Management
+                <h3 className="text-xl font-medium font-general mb-2 text-[#393939]">
+                  Centralized and Collaborative Hotel Revenue Management.
                 </h3>
                 <p className="text-[#393939] text-lg font-normal font-general leading-5">
                   For any hotel, revenue management is a priority. Pacific Pearl
@@ -359,6 +400,13 @@ const ServicesContent = () => {
                 <span className="px-3 py-2 border-1 border-[#00224B] text-sm text-[#00224B] font-medium w-fit bg-[#F7FBFF]">
                   Hotel segmentation reports to track and forecast market
                   segments
+                </span>
+              </div>
+
+              {/* Row 5: single span */}
+              <div className="grid grid-cols-1">
+                <span className="px-3 py-2 border-1 border-[#00224B] text-sm text-[#00224B] font-medium w-fit bg-[#F7FBFF]">
+                  Quarterly reporting and reviews.
                 </span>
               </div>
             </div>

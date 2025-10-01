@@ -1,8 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/dist/client/link";
 
 const Hero = () => {
+  const email = "ariana@pacificpearlhotels.com";
+  const subject = "Joining Inquiry";
+  const body = "Hello, I am interested in joining...";
+
+  // Default mailto link (respects user’s default mail app)
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+
+  // Gmail-specific link (forces Gmail compose window in browser)
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    email
+  )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Video */}
@@ -51,12 +65,19 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4"
         >
-          <button className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-200 text-sm sm:text-base font-general">
+          <Link
+            href={"/about"}
+            className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-200 text-sm sm:text-base font-general"
+          >
             See Case Studies
-          </button>
-          <button className="bg-[#001931] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 text-sm sm:text-base font-general">
+          </Link>
+          <Link
+            href={mailtoLink}
+            target="_blank"
+            className="bg-[#001931] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 text-sm sm:text-base font-general"
+          >
             Partner with Us
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

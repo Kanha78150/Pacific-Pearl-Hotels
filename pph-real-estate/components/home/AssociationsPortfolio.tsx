@@ -11,11 +11,21 @@ const stats = [
 ];
 
 const logos = [
+  "/images/logos/HiltonHotelsLogo.png",
+  "/images/logos/Marriott-Logo.png",
+  "/images/logos/ihg-Logo.png",
+  "/images/logos/WHR-Logo.webp",
+  "/images/logos/hyatt_logo.png",
+  "/images/logos/Choice_logo.png",
+  "/images/logos/Accor.png",
+
   "/images/logos/Oimg1.png",
   "/images/logos/Oimg2.png",
   "/images/logos/Oimg3.png",
   "/images/logos/Oimg4.png",
   "/images/logos/Oimg5.png",
+
+  "/images/logos/ihg-Logo.png",
 ];
 
 const AssociationsPortfolio = () => {
@@ -30,7 +40,7 @@ const AssociationsPortfolio = () => {
           viewport={{ once: true }}
           className="text-3xl font-gilda font-normal text-[#000000] mb-10"
         >
-          Our Associations
+          Brand Affiliations
         </motion.h2>
 
         <div className="flex flex-wrap items-center justify-center gap-30">

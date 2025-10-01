@@ -64,12 +64,13 @@ export default function AboutContent() {
               <p>
                 Michael Gallegos, CHA, is the President and CEO of Pacific Pearl
                 Hotels, LLC (PPH), based in San Diego. Since its founding, PPH
-                has acquired over $3.5 billion in hotels and resorts across the
+                has acquired over $4 billion in hotels and resorts across the
                 U.S., Spain, and Mexico. The company owns and operates 23
                 properties with over 6,500 rooms and employs more than 3,200
                 people. Its portfolio includes both independent and branded
                 hotels, with affiliations spanning major brands like Marriott,
-                Hilton, Hyatt, and Wyndham.
+                Hilton, Hyatt, Choice, Accor, Best Western and Home2 Suites
+                Wyndham.
               </p>
               <p>
                 Gallegos earned his Bachelor&apos;s degree from the University
@@ -91,7 +92,7 @@ export default function AboutContent() {
                 className="object-cover"
               />
               <p className="mt-2 font-semibold font-general text-lg text-[#000000]">
-                Michael Gallegos
+                Michael Gallegos, CHA
               </p>
               <p className="font-normal font-general text-[#000000] text-lg">
                 CHA is President and CEO
@@ -121,8 +122,8 @@ export default function AboutContent() {
               investment capital institutions and high net worth individuals.
               Previous and current partners include Morgan Stanley, Merrill
               Lynch, GE Capital & GE Real Estate, Prudential Real Estate
-              Advisors, ING Real Estate Advisors and Glenmont Capital
-              Management.
+              Advisors (PRISA Fund), ING Apollo Real Estate Advisors and
+              Glenmont Capital Management.
             </p>
           </div>
         </motion.section>
@@ -136,15 +137,69 @@ export default function AboutContent() {
           className="space-y-8 border border-[#E7E7E7] p-6 bg-white"
         >
           <div>
-            <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
-              Balanced Focus
-            </h3>
-            <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
-              Pacific Pearl {"Hotel's"} philosophy is to challenge, motivate,
-              inspire and reward our associates. We pride ourselves in providing
-              the best care for our guests, and creating the most positive and
-              memorable experiences possible for all of our associates.
-            </p>
+            <div>
+              <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
+                Balanced Focus
+              </h3>
+              <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
+                Pacific Pearl {"Hotel's"} philosophy is to challenge, motivate,
+                inspire and reward our associates. We pride ourselves in
+                providing the best care for our guests, and creating the most
+                positive and memorable experiences possible for all of our
+                associates.
+              </p>
+            </div>
+
+            {/* New Sections */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mt-10"
+            >
+              <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
+                Guest Experience
+              </h3>
+              <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
+                At Pacific Pearl Hotels, we go beyond great service to create
+                unique and memorable moments that make every guest feel truly
+                seen and valued. From personalized touches to thoughtful details
+                that anticipate needs, our approach ensures each stay feels
+                special, genuine, and unforgettable.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mt-10"
+            >
+              <h3 className="text-xl text-[#161616] font-medium font-general mb-3">
+                Careers with PPH
+              </h3>
+              <p className="text-[#393939] text-lg font-normal font-general leading-relaxed mb-2">
+                At Pacific Pearl Hotels, we want our hotels to be the best they
+                can be, and we want our guests to be satisfied. To achieve that
+                goal, we seek out the most qualified individuals available to
+                help us strengthen our presence in the hospitality industry.
+              </p>
+              <p className="text-[#393939] text-lg font-normal font-general leading-relaxed mb-2">
+                We believe attitude is everything. A positive, can-do mindset is
+                just as important as experience. Our team culture is built on
+                collaboration, dedication, and the belief that great service
+                begins with the right outlook.
+              </p>
+              <p className="text-[#393939] text-lg font-normal font-general leading-relaxed">
+                We offer competitive salaries, comprehensive benefits, and
+                opportunities for advancement in an exceptional team
+                environment. We are committed to promoting from within, creating
+                clear pathways for long-term career growth so our people can
+                continue to thrive with us year after year.
+              </p>
+            </motion.div>
           </div>
         </motion.section>
 
@@ -187,15 +242,19 @@ export default function AboutContent() {
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             Pacific Pearl Hotels is a third-party, brand-approved management
             company with the proven ability to operate leading global
-            hospitality brands, including Hilton, Marriott, IHG, and more. Our
-            expertise spans luxury five-star resorts and spas, full-service
-            hotels, select-service properties, and extended-stay accommodations.
+            hospitality brands, including Hilton, Marriott, IHG, Wyndham, Hyatt,
+            Choice, Accor, Best Western, and more. Our expertise spans luxury
+            five-star resorts and spas, full-service hotels, select-service
+            properties, and extended-stay accommodations.
+          </p>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
             With a strong track record across California, New Mexico, Texas,
             Arizona, Las Vegas, and Mexico, we are recognized as a premier
             operator in the Southwest and beyond. Building on this foundation,
             we are expanding internationally to dynamic destinations such as
-            Spain and the Maldives, bringing our hands-on approach, operational
-            excellence, and guest-first philosophy to each property we manage.
+            Mexico, Spain, and the Maldives, bringing our hands-on approach,
+            operational excellence, and guest-first philosophy to each property
+            we manage.
           </p>
         </motion.section>
 
@@ -208,25 +267,25 @@ export default function AboutContent() {
           viewport={{ once: true }}
         >
           <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
-            PPH National Recognition
+            Accolades Earned
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 rank: "6th",
-                desc: "Ranked 6th of the Top 100 independent, Third-Party Management Companies as listed in the March 2009 issue of Hotel & Motel Magazine",
+                desc: "Ranked 6th of the Top 100 independent, Third-Party Management Companies as listed in the Previously earned issue of Hotel & Motel Magazine",
               },
               {
                 rank: "16th",
-                desc: "Ranked 16th of the Top 100 Management Companies as listed in the April 2009 issue of Hotel Business Magazine",
+                desc: "Ranked 16th of the Top 100 Management Companies as listed in the Previously earned issue of Hotel Business Magazine",
               },
               {
                 rank: "14th",
-                desc: "Ranked 14th of the Top 25 Hotel Owners as listed in the July 2008 issue of the National Real Estate Investor Magazine",
+                desc: "Ranked 14th of the Top 25 Hotel Owners as listed in the Previously earned issue of the National Real Estate Investor Magazine",
               },
               {
                 rank: "12th",
-                desc: "Ranked 12th of the top 100 Owners & Developers in the United States as listed in this September 2007 issue of Hotel Business Magazine",
+                desc: "Ranked 12th of the top 100 Owners & Developers in the United States as listed in this Previously earned issue of Hotel Business Magazine",
               },
             ].map((item, idx) => (
               <motion.div

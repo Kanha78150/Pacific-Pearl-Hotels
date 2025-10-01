@@ -3,8 +3,29 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
+  const email = "ariana@pacificpearlhotels.com";
+  const subject = "Joining Inquiry";
+  const body = `Hello,
+I am interested in joining.
+Please provide more details.`;
+
+  const encodedSubject = encodeURIComponent(subject);
+  const encodedBody = encodeURIComponent(body);
+
+  const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent =
+      typeof navigator === "undefined" ? "" : navigator.userAgent;
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+  }, []);
+
   return (
     <section>
       {/* CTA Section above footer */}
@@ -16,19 +37,37 @@ const Footer = () => {
         className="bg-[#01172C] max-w-5xl mx-auto mt-20 mb-20 px-6 md:px-8 py-10 md:py-14 text-center shadow-lg"
       >
         <h2 className="text-5xl md:text-3xl font-normal text-[#FFFFFF] mb-4 font-gilda">
-          Join Us in Hospitality Success
+          Partner with Us in Hospitality Success
         </h2>
         <p className="text-[#DCDCDC] font-general font-normal text-xl mb-6 max-w-4xl mx-auto leading-snug">
           Partner with us to unlock exceptional investment opportunities and
           achieve remarkable returns. Our experienced team is ready to elevate
           your hospitality assets to new heights.
         </p>
-        <button className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general">
-          Join Us
-        </button>
+
+        {/* Smart Join Us Button */}
+        {isMobile ? (
+          <Link
+            href={mailtoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general cursor-pointer hover:bg-white hover:text-[#01172C] transition"
+          >
+            Contact Us
+          </Link>
+        ) : (
+          <Link
+            href={gmailLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general cursor-pointer hover:bg-white hover:text-[#01172C] transition"
+          >
+            Contact Us
+          </Link>
+        )}
       </motion.div>
 
-      {/* Footer Section with animation */}
+      {/* Footer Section */}
       <motion.footer
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -108,17 +147,17 @@ const Footer = () => {
             <ul className="space-y-2 text-center">
               <li>
                 <Link
-                  href="https://x.com"
+                  href="https://www.linkedin.com/company/pacific-pearl-hotels-llc/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#F6F4E9] font-light text-base font-satoshi"
                 >
-                  X
+                  LinkedIn
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/pacificpearlhotels/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#F6F4E9] font-light text-base font-satoshi"
@@ -128,7 +167,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/pacificpearlhotels/?igsh=NTc4MTIwNjQ2YQ%3D%3D#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#F6F4E9] font-light text-base font-satoshi"
@@ -140,13 +179,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Full-width Bottom Bar */}
+        {/* Bottom Bar */}
         <div className="border-t border-[#222b3a] mt-10 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto px-6 md:px-8">
             <span className="text-[#F6F4E9] text-base font-satoshi font-light">
               © 2025 Luxort, All Right Reserved
             </span>
-            <div className="flex space-x-6 mt-4 md:mt-0 ">
+            <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/terms"
                 className="text-[#F6F4E9] text-base font-satoshi font-light"

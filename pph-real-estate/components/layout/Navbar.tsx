@@ -13,7 +13,7 @@ const Navbar = () => {
   const [selectedLang, setSelectedLang] = useState("EN");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const languages = ["EN", "FR", "DE", "ES"];
+  const languages = ["EN", "ES"];
   const navItems = ["HOME", "ABOUT", "HOTELS", "SERVICES"];
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Navbar = () => {
       transition: {
         delay: i * 0.15,
         duration: 0.5,
-        ease: [0.42, 0, 1, 1] as const, // 👈 mark as const
+        ease: [0.42, 0, 1, 1] as const,
       },
     }),
   };
@@ -182,10 +182,10 @@ const Navbar = () => {
             <span className="text-gray-400">|</span>
 
             <Link
-              href="tel:+12375648970"
+              href="tel:+1 (858) 964-5500"
               className="hover:text-gray-300 transition-colors duration-300"
             >
-              +123 7564 8970
+              +1 (858) 964-5500
             </Link>
           </motion.div>
         </div>
@@ -319,11 +319,11 @@ const Navbar = () => {
                 className="pt-4 border-t border-white/10"
               >
                 <Link
-                  href="tel:+12375648970"
+                  href="tel:+1 (858) 964-5500"
                   className="flex items-center gap-3 py-3 px-4 text-lg text-white hover:bg-white/5 rounded-lg transition-colors duration-300"
                 >
                   <span className="text-2xl">📞</span>
-                  +123 7564 8970
+                  +1 (858) 964-5500
                 </Link>
               </motion.div>
             </div>
