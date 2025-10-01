@@ -2,21 +2,28 @@
 
 import { motion } from "framer-motion";
 import Link from "next/dist/client/link";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const email: string = "ariana@pacificpearlhotels.com";
-  const subject: string = "Joining Inquiry";
-  const body: string = "Hello, I am interested in joining...";
+  const subject: string = " Partner with Us Inquiry";
+  const body: string = `Hello,
+I am interested to partner with you.
+Please provide more details.`;
 
-  // Default mailto link (respects user’s default mail app)
-  const mailtoLink: string = `mailto:${email}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(body)}`;
+  const encodedSubject: string = encodeURIComponent(subject);
+  const encodedBody: string = encodeURIComponent(body);
 
-  // Gmail-specific link (forces Gmail compose window in browser)
-  const gmailLink: string = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-    email
-  )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const mailtoLink: string = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+  const gmailLink: string = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
+
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const userAgent: string =
+      typeof navigator === "undefined" ? "" : navigator.userAgent;
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+  }, []);
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Video */}
@@ -71,13 +78,26 @@ const Hero = () => {
           >
             See Case Studies
           </Link>
-          <Link
-            href={mailtoLink}
-            target="_blank"
-            className="bg-[#001931] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 text-sm sm:text-base font-general"
-          >
-            Partner with Us
-          </Link>
+          {/* Smart Join Us Button */}
+          {isMobile ? (
+            <Link
+              href={mailtoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general cursor-pointer hover:bg-white hover:text-[#01172C] transition"
+            >
+              Partner with Us
+            </Link>
+          ) : (
+            <Link
+              href={gmailLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general cursor-pointer hover:bg-white hover:text-[#01172C] transition"
+            >
+              Partner with Us
+            </Link>
+          )}
         </motion.div>
       </div>
     </section>
