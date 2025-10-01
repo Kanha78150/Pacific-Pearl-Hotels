@@ -6,22 +6,22 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Footer = () => {
-  const email = "ariana@pacificpearlhotels.com";
-  const subject = "Joining Inquiry";
-  const body = `Hello,
+  const email: string = "ariana@pacificpearlhotels.com";
+  const subject: string = "Joining Inquiry";
+  const body: string = `Hello,
 I am interested in joining.
 Please provide more details.`;
 
-  const encodedSubject = encodeURIComponent(subject);
-  const encodedBody = encodeURIComponent(body);
+  const encodedSubject: string = encodeURIComponent(subject);
+  const encodedBody: string = encodeURIComponent(body);
 
-  const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
-  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
+  const mailtoLink: string = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+  const gmailLink: string = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
-    const userAgent =
+    const userAgent: string =
       typeof navigator === "undefined" ? "" : navigator.userAgent;
     setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
   }, []);

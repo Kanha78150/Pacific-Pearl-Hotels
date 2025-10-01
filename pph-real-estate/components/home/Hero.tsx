@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import Link from "next/dist/client/link";
 
 const Hero = () => {
-  const email = "ariana@pacificpearlhotels.com";
-  const subject = "Joining Inquiry";
-  const body = "Hello, I am interested in joining...";
+  const email: string = "ariana@pacificpearlhotels.com";
+  const subject: string = "Joining Inquiry";
+  const body: string = "Hello, I am interested in joining...";
 
   // Default mailto link (respects user’s default mail app)
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+  const mailtoLink: string = `mailto:${email}?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(body)}`;
 
   // Gmail-specific link (forces Gmail compose window in browser)
-  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  const gmailLink: string = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
     email
   )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   return (
