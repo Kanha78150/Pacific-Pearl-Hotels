@@ -53,7 +53,7 @@ const features = [
   },
   {
     image: "/images/standout/slide4.jpg",
-    icon: Ruler,
+    icon: Bed,
     title: "Innovative Designs That Inspire and Engage",
     description:
       "Our design-driven approach creates memorable experiences that resonate.",
@@ -72,26 +72,25 @@ const WhyWeStandOut = () => {
       });
     }
   };
-  const email = "ariana@pacificpearlhotels.com";
-  const subject = "Joining Inquiry";
-  const body = `Hello,
+  const email: string = "ariana@pacificpearlhotels.com";
+  const subject: string = "Joining Inquiry";
+  const body: string = `Hello,
 I am interested in joining.
 Please provide more details.`;
 
-  const encodedSubject = encodeURIComponent(subject);
-  const encodedBody = encodeURIComponent(body);
+  const encodedSubject: string = encodeURIComponent(subject);
+  const encodedBody: string = encodeURIComponent(body);
 
   const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
   const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
-    const userAgent =
+    const userAgent: string =
       typeof navigator === "undefined" ? "" : navigator.userAgent;
     setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
   }, []);
-
   return (
     <section className="py-16 px-3 md:px-9 lg:px-1 relative">
       {/* Header */}
