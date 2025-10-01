@@ -10,7 +10,7 @@ const stats = [
   { value: "77%", label: "Repeat Guest Rate" },
 ];
 
-const logos = [
+const logos: string[] = [
   "/images/logos/HiltonHotelsLogo.png",
   "/images/logos/Marriott-Logo.png",
   "/images/logos/ihg-Logo.png",
@@ -18,14 +18,11 @@ const logos = [
   "/images/logos/hyatt_logo.png",
   "/images/logos/Choice_logo.png",
   "/images/logos/Accor.png",
-
   "/images/logos/Oimg1.png",
   "/images/logos/Oimg2.png",
   "/images/logos/Oimg3.png",
   "/images/logos/Oimg4.png",
   "/images/logos/Oimg5.png",
-
-  "/images/logos/ihg-Logo.png",
 ];
 
 const AssociationsPortfolio = () => {
@@ -43,28 +40,42 @@ const AssociationsPortfolio = () => {
           Brand Affiliations
         </motion.h2>
 
-        <div className="flex flex-wrap items-center justify-center gap-30">
-          {logos.map((logo, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                src={logo}
-                alt="Association Logo"
-                width={120}
-                height={60}
-                className="object-contain"
-              />
-            </motion.div>
-          ))}
+        <div className="relative w-full overflow-hidden py-6 bg-white">
+          <motion.div
+            className="flex gap-6 sm:gap-10 md:gap-12 lg:gap-16"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 25, // higher = slower
+                ease: "linear",
+              },
+            }}
+          >
+            {[...logos, ...logos].map((logo, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 
+                   w-[100px] h-[60px]   /* default for small screens */
+                   sm:w-[120px] sm:h-[70px] 
+                   md:w-[140px] md:h-[80px] 
+                   lg:w-[160px] lg:h-[90px]
+                   flex items-center justify-center"
+              >
+                <Image
+                  src={logo}
+                  alt="Association Logo"
+                  width={160}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      {/* Portfolio */}
       {/* Portfolio */}
       <div className="relative bg-gradient-to-b from-[#001229] to-[#000000] text-white py-20 px-6 overflow-hidden">
         {/* Background SVG */}

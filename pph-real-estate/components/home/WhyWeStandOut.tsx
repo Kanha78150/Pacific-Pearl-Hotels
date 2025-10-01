@@ -11,6 +11,8 @@ import {
   ConciergeBell,
   Bed,
   Ruler,
+  Hotel,
+  Brain,
 } from "lucide-react";
 
 const features = [
@@ -22,18 +24,32 @@ const features = [
       "Delivering unforgettable guest experiences through passionate and dedicated teams",
   },
   {
-    image: "/images/standout/slide2.jpg",
-    icon: Bed,
-    title: "Creating Unforgettable Moments for Every Guest",
+    image: "/images/standout/slide3.jpg",
+    icon: ConciergeBell,
+    title: "Heartfelt service that makes a difference",
+    description:
+      "We believe in hospitality that connects with guests on a personal level.",
+  },
+  {
+    image: "/images/standout/Owner Mindset.avif",
+    icon: Brain,
+    title: "Owner operator mindset",
     description:
       "We focus on exceptional experiences that leave lasting impressions.",
   },
   {
-    image: "/images/standout/slide3.jpg",
-    icon: ConciergeBell,
-    title: "Heartfelt Service That Makes a Difference",
+    image: "/images/standout/slide2.jpg",
+    icon: Ruler,
+    title: "Long standing brand relationships",
     description:
-      "We believe in hospitality that connects with guests on a personal level.",
+      "Our design-driven approach creates memorable experiences that resonate.",
+  },
+  {
+    image: "/images/standout/Independent.avif",
+    icon: Hotel,
+    title: "Independent Hotel Expertise",
+    description:
+      "Our design-driven approach creates memorable experiences that resonate.",
   },
   {
     image: "/images/standout/slide4.jpg",
