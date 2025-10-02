@@ -74,7 +74,7 @@ Please provide more details.`;
         >
           <Link
             href={"/about"}
-            className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-200 text-sm sm:text-base font-general"
+            className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-transparent text-sm sm:text-base font-general hover:border hover:border-white transition hover:text-white text-center"
           >
             See Case Studies
           </Link>
@@ -84,7 +84,7 @@ Please provide more details.`;
               href={mailtoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general cursor-pointer hover:bg-white hover:text-[#01172C] transition"
+              className="bg-[#01172C] text-[#FFFFFF] px-6 py-3 rounded-md font-medium hover:bg-[#F1F1F1] hover:text-[#01172C] text-sm sm:text-base font-general"
             >
               Partner with Us
             </Link>
@@ -93,7 +93,7 @@ Please provide more details.`;
               href={gmailLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#FFFFFF] px-6 py-2 rounded text-[#FFFFFF] text-base font-medium font-general cursor-pointer hover:bg-white hover:text-[#01172C] transition"
+              className="bg-[#01172C] text-[#FFFFFF] px-6 py-3 rounded-md font-medium hover:bg-[#F1F1F1] hover:text-[#01172C] text-sm sm:text-base font-general"
             >
               Partner with Us
             </Link>

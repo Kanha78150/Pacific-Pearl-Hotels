@@ -17,3 +17,65 @@
 .font-gilda {
   font-family: var(--font-gilda-display);
 }
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+  background-color: transparent !important;
+}
+
+.VIpgJd-ZVi9od-ORHb {
+  display: none !important;
+  background-color: transparent !important;
+}
+
+.VIpgJd-ZVi9od-ORHb {
+  display: none !important;
+  background-color: transparent !important;
+}
+
+/* Prevent body from being pushed down by the hidden banner */
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget-simple {
+  width: 100% !important;
+  height: auto !important;
+  display: flex !important;
+  justify-content: center !important ;
+  align-items: center !important;
+  padding: 5px !important;
+  border: none !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+}
+
+.goog-te-gadget img {
+  display: none !important;
+}
+
+/* Hide only the top floating banner (if inserted) */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0 !important;
+}
+
+/* Make the inline gadget look nice (the widget uses these classes) */
+.goog-te-gadget-simple {
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 5px !important;
+  border: none !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+}
+
+/* Optional: hide the small google image if you were removing it before */
+.goog-te-gadget img {
+  display: none !important;
+}

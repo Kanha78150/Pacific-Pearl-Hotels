@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/dist/client/link";
 import Image from "next/image";
 
 const projects = [
@@ -16,7 +17,7 @@ const projects = [
   },
   {
     image: "/images/projects/project2.jpg",
-    title: "Villaitana Golf & Tennis Resort",
+    title: "Home2 Suites",
     subtitle: "#1 Destination Spa in the U.S. – Condé Nast",
   },
 ];
@@ -41,7 +42,7 @@ const FeaturedProjects = () => {
           and enhance guest satisfaction.
         </p>
         <button className="border border-[#010407] px-6 py-2 hover:bg-black hover:text-white transition font-general font-medium">
-          View our Flagship Resorts
+          <Link href="/hotels">View our Flagship Resorts</Link>
         </button>
       </motion.div>
 
