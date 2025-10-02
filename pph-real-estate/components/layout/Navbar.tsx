@@ -5,12 +5,20 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+
+interface GoogleTranslateElementOptions {
+  pageLanguage: string;
+  includedLanguages?: string;
+  layout?: number;
+  autoDisplay?: boolean;
+}
+
 declare global {
   interface Window {
     google?: {
       translate?: {
         TranslateElement: {
-          new (options: any, elementId: string): any;
+          new (options: GoogleTranslateElementOptions, elementId: string): void;
           InlineLayout: {
             SIMPLE: number;
           };
