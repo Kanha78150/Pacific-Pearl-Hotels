@@ -305,15 +305,15 @@ const ServicesContent = () => {
                 </h3>
                 <p className="text-[#393939] text-lg font-general font-normal leading-snug">
                   Whether our food and beverage department addresses room
-                  service, lounge, restaurant or catering events, Pacific Pearl
+                  service, lounge, restaurant, or catering events, Pacific Pearl
                   Hotels understands that the key to successful operations is
                   grounded in exceptional customer service. We strive to
-                  constantly exceed the guest’s expectations by focusing on high
-                  quality ingredients and guest service. High-quality and
-                  natural ingredients. Our corporate team and property managers
-                  monitor daily food and beverage performance through reporting
-                  systems for revenue, expense, ordering and labor to met with
-                  brand established standards and our own quality control.
+                  constantly exceed the guests’ expectations by focusing on high
+                  quality and natural ingredients. Our corporate team and
+                  on-site property managers monitor daily food and beverage
+                  performance through reporting systems for revenue, expenses,
+                  and ordering and labor to meet brand established standards and
+                  our own quality control.
                 </p>
               </div>
             </div>
@@ -450,7 +450,7 @@ const ServicesContent = () => {
               {/* Left: Image */}
               <div className="flex-shrink-0 flex justify-center items-start">
                 <Image
-                  src="/images/ServiceImages/s5.jpg"
+                  src="/images/ServiceImages/s6.jpg"
                   className="object-cover"
                   alt="Sales & Marketing"
                   width={354}

@@ -3,12 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const stats = [
-  { value: "87%", label: "Customer Satisfaction Rate" },
-  { value: "56%", label: "Occupancy Rate Achieved" },
-  { value: "87%", label: "Revenue Growth Yearly" },
-  { value: "77%", label: "Repeat Guest Rate" },
-];
+// const stats = [
+//   { value: "87%", label: "Customer Satisfaction Rate" },
+//   { value: "56%", label: "Occupancy Rate Achieved" },
+//   { value: "87%", label: "Revenue Growth Yearly" },
+//   { value: "77%", label: "Repeat Guest Rate" },
+// ];
 
 const logos: string[] = [
   "/images/logos/HiltonHotelsLogo.png",
@@ -18,11 +18,7 @@ const logos: string[] = [
   "/images/logos/hyatt_logo.png",
   "/images/logos/Choice_logo.png",
   "/images/logos/Accor.png",
-  "/images/logos/Oimg1.png",
   "/images/logos/Oimg2.png",
-  "/images/logos/Oimg3.png",
-  "/images/logos/Oimg4.png",
-  "/images/logos/Oimg5.png",
 ];
 
 const AssociationsPortfolio = () => {
@@ -122,7 +118,7 @@ const AssociationsPortfolio = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto mt-16 text-left relative z-10 font-gilda">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto mt-16 text-left relative z-10 font-gilda">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
@@ -138,7 +134,7 @@ const AssociationsPortfolio = () => {
               <div className="w-62 h-[1px] bg-[#7B5014] mx-auto mt-2" />
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
