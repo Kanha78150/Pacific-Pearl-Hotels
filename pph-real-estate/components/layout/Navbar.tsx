@@ -5,6 +5,23 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+declare global {
+  interface Window {
+    google?: {
+      translate?: {
+        TranslateElement: {
+          new (options: any, elementId: string): any;
+          InlineLayout: {
+            SIMPLE: number;
+          };
+        };
+      };
+    };
+    googleTranslateElementInit?: () => void;
+  }
+}
+
+export {};
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,7 +37,7 @@ const Navbar = () => {
   // Load Google Translate script and init once
   useEffect(() => {
     const addGoogleTranslateScript = () => {
-      if (window.google && window.google.translate) {
+      if (window?.google && window.google?.translate) {
         // script already present
         if (typeof window.googleTranslateElementInit === "function") {
           window.googleTranslateElementInit();
@@ -40,12 +57,12 @@ const Navbar = () => {
       // global callback the script will call
       window.googleTranslateElementInit = () => {
         try {
-          new (window as any).google.translate.TranslateElement(
+          new window.google!.translate!.TranslateElement(
             {
               pageLanguage: "en",
               includedLanguages: "en,es",
               layout:
-                window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+                window.google!.translate!.TranslateElement.InlineLayout.SIMPLE,
               autoDisplay: false,
             },
             "google_translate_element"
