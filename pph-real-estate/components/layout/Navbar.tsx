@@ -20,10 +20,10 @@ const Navbar = () => {
   // Load Google Translate script and init once
   useEffect(() => {
     const addGoogleTranslateScript = () => {
-      if ((window as any).google && (window as any).google.translate) {
+      if (window.google && window.google.translate) {
         // script already present
-        if (typeof (window as any).googleTranslateElementInit === "function") {
-          (window as any).googleTranslateElementInit();
+        if (typeof window.googleTranslateElementInit === "function") {
+          window.googleTranslateElementInit();
         }
         return;
       }
@@ -38,14 +38,14 @@ const Navbar = () => {
       document.body.appendChild(script);
 
       // global callback the script will call
-      (window as any).googleTranslateElementInit = () => {
+      window.googleTranslateElementInit = () => {
         try {
           new (window as any).google.translate.TranslateElement(
             {
               pageLanguage: "en",
               includedLanguages: "en,es",
-              layout: (window as any).google.translate.TranslateElement
-                .InlineLayout.SIMPLE,
+              layout:
+                window.google.translate.TranslateElement.InlineLayout.SIMPLE,
               autoDisplay: false,
             },
             "google_translate_element"
