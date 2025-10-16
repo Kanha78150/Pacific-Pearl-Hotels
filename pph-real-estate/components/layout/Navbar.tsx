@@ -171,7 +171,7 @@ const Navbar = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:flex items-center justify-between w-full">
           {/* Left Nav */}
-          <nav className="flex gap-8 text-base font-normal">
+          <nav className="flex gap-8 text-base font-normal font-general">
             {navItems.map((item, i) => (
               <motion.div
                 key={item}
@@ -222,7 +222,7 @@ const Navbar = () => {
 
             <Link
               href="tel:+1 (858) 964-5500"
-              className="hover:text-gray-300 transition-colors duration-300"
+              className="hover:text-gray-300 transition-colors duration-300 font-general"
             >
               +1 (858) 964-5500
             </Link>

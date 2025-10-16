@@ -6,19 +6,19 @@ import Image from "next/image";
 
 const projects = [
   {
-    image: "/images/projects/project1.jpg",
+    image: "/images/projects/updatedproject1.jpg",
     title: "Le Méridien Cancun Resort & Spa",
-    subtitle: "#1 Destination Spa in the U.S. – Condé Nast",
+    subtitle: "#1 Resort in Mexico & Latin America – Condé Nast",
   },
   {
-    image: "/images/projects/project2.jpg",
+    image: "/images/projects/updatedproject2.jpg",
     title: "Mayfair Resort & Spa",
     subtitle: "#1 Destination Spa in the U.S. – Condé Nast",
   },
   {
-    image: "/images/projects/project2.jpg",
-    title: "Home2 Suites",
-    subtitle: "#1 Destination Spa in the U.S. – Condé Nast",
+    image: "/images/projects/updatedproject3.jpg",
+    title: "Home2 Suites El Paso, Texas",
+    subtitle: "Averaging 98% Occupancy Rate",
   },
 ];
 
@@ -38,8 +38,8 @@ const FeaturedProjects = () => {
         </h2>
         <p className="text-[#191919] font-general font-normal mb-6">
           Our commitment to proven performance ensures consistent success across
-          our properties. We leverage data-driven strategies to maximize returns
-          and enhance guest satisfaction.
+          our properties and diverse asset classes. We leverage data-driven
+          strategies to maximize returns and enhance guest satisfaction
         </p>
         <button className="border border-[#010407] px-6 py-2 hover:bg-black hover:text-white transition font-general font-medium">
           <Link href="/hotels">View our Flagship Resorts</Link>

@@ -3,8 +3,29 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AboutSidebar from "./AboutSidebar";
+import Link from "next/dist/client/link";
+import { useEffect, useState } from "react";
 
 export default function AboutContent() {
+  const email: string = "ariana@pacificpearlhotels.com";
+  const subject: string = " Partner with Us Inquiry";
+  const body: string = `Hello,
+  I am interested to partner with you.
+  Please provide more details.`;
+
+  const encodedSubject: string = encodeURIComponent(subject);
+  const encodedBody: string = encodeURIComponent(body);
+
+  const mailtoLink: string = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`;
+  const gmailLink: string = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodedSubject}&body=${encodedBody}`;
+
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const userAgent: string =
+      typeof navigator === "undefined" ? "" : navigator.userAgent;
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(userAgent));
+  }, []);
   return (
     <div className="bg-[#FAFAFA] max-w-7xl mx-auto px-6 md:px-8 py-12 flex flex-col md:flex-row gap-10">
       {/* Sidebar */}
@@ -35,16 +56,29 @@ export default function AboutContent() {
             are storytellers of place, architects of experience, and stewards of
             long-term growth.
           </p>
-          <h3 className="text-lg font-medium font-general text-[#000000] my-3">
+        </motion.section>
+
+        {/* Our History */}
+        <motion.section
+          id="history"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
             Our History
-          </h3>
+          </h2>
           <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            As a company that owns and operates hotels, Pacific Pearl Hotels
-            brings a unique and experienced perspective to managing hotels. We
-            identify opportunities for growth and formulate solutions to provide
-            our partners with rapid operational revival. Our work with our
-            partners results in improved cash flow, profitability and stabilized
-            performance throughout our portfolio.
+            With over 35 years of legacy in hotel ownership and operations,
+            Pacific Pearl Hotels (PPH) brings a uniquely experienced perspective
+            to managing hotels. While rooted in decades of proven success, we
+            operate with a forward-looking mindset—constantly evolving,
+            adapting, and innovating to meet today &apos;s dynamic hospitality
+            landscape. We identify opportunities for growth and deliver tailored
+            solutions that drive rapid operational revival. Our approach
+            consistently enhances cash flow, strengthens profitability, and
+            ensures long-term stability across our diverse portfolio.
           </p>
         </motion.section>
 
@@ -405,20 +439,49 @@ export default function AboutContent() {
             forefront of hospitality innovation and drive measurable results for
             our owners and stakeholders.
           </p>
-          <div className="space-y-2 pl-4">
-            <h3 className="text-lg font-medium font-general text-[#000000]">
-              Case Studies
-            </h3>
-            <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-              Our track record speaks through the performance of the hotels we
-              manage. From repositioning underperforming assets to driving
-              market-leading results in luxury, select service, and extended
-              stay segments, Pacific Pearl Hotels consistently delivers
-              measurable success. While many of our case studies are tailored
-              for private discussions, we welcome you to reach out directly for
-              detailed examples of our performance, strategies, and results.
-            </p>
-          </div>
+          {/* Smart Join Us Button */}
+          {isMobile ? (
+            <Link
+              href={mailtoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#01172C] text-[#FFFFFF] px-6 py-3 rounded-md font-medium hover:bg-[#F1F1F1] hover:text-[#01172C] text-sm sm:text-base font-general"
+            >
+              See Case Studies
+            </Link>
+          ) : (
+            <Link
+              href={gmailLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#01172C] text-[#FFFFFF] px-6 py-3 rounded-md font-medium hover:bg-[#F1F1F1] hover:text-[#01172C] text-sm sm:text-base font-general"
+            >
+              See Case Studies
+            </Link>
+          )}
+        </motion.section>
+
+        {/* Case Studies */}
+        <motion.section
+          id="case-studies"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-4"
+        >
+          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
+            Case Studies
+          </h2>
+          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
+            Our track record speaks through the performance of the hotels we
+            manage. From repositioning underperforming assets to driving
+            market-leading results in luxury, select service, and extended stay
+            segments, Pacific Pearl Hotels consistently delivers measurable
+            success. While many of our case studies are tailored for private
+            discussions, we welcome you to reach out directly for detailed
+            examples of our performance, strategies, and results.
+          </p>
         </motion.section>
 
         {/* Corporate Citizenship */}

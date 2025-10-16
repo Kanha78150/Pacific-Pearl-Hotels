@@ -920,6 +920,16 @@ export default function HotelCard() {
       link: "/",
       status: "Exited",
     },
+    {
+      name: "Le Méridien Dallas by the Galleria",
+      location: "Dallas, Texas",
+      phone: "N/A",
+      rating: "3-Star Hotel",
+      rooms: 258,
+      image: "/images/Hotels/Le Méridien Dallas by the Galleria.jpg",
+      link: "https://www.marriott.com/en-us/hotels/dalmd-le-meridien-dallas-by-the-galleria/overview/",
+      status: "Exited",
+    },
   ];
 
   return (

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 const sections = [
   { id: "mission", label: "Our Mission" },
+  { id: "history", label: "Our History" },
   { id: "leadership", label: "Leadership" },
   { id: "strengths", label: "PPH Strengths" },
   { id: "brand-expertise", label: "Brand Expertise" },
@@ -11,6 +12,7 @@ const sections = [
   { id: "employee-relations", label: "Employee Relations" },
   { id: "sustainability", label: "Sustainability at Pacific Pearl Hotels" },
   { id: "technology-data", label: "Technology & Data" },
+  { id: "case-studies", label: "Case Studies" },
   { id: "citizenship", label: "Corporate Citizenship" },
 ];
 

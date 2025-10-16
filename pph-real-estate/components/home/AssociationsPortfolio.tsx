@@ -101,9 +101,15 @@ const AssociationsPortfolio = () => {
             viewport={{ once: true }}
             className="text-lg text-[#DCDCDC] mb-8 font-general font-normal"
           >
-            With over 130 hotels in our portfolio, we are proud to deliver
-            exceptional experiences across diverse markets. Our commitment to
-            quality and innovation sets us apart in the hospitality industry.
+            For over 35 years, PPH has combined top-tier hospitality expertise
+            with an innovative mindset, continually evolving to meet the needs
+            of today’s guests and owners. Based in San Diego, California,
+            Pacific Pearl Hotels (PPH) is one of the nation’s largest
+            independent hotel companies. PPH owns and operates 23 lodging
+            properties, encompassing over 6,500 rooms and employing more than
+            3,200 team members. We are proud to deliver exceptional experiences
+            across diverse markets through our portfolio of full-service,
+            select-service, extended-stay, boutique, and luxury resorts.
           </motion.p>
 
           <motion.button

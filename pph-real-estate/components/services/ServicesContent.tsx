@@ -69,40 +69,6 @@ const ServicesContent = () => {
           </p>
         </motion.section>
 
-        {/* Our Mission */}
-        <motion.section
-          id="mission"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-xl font-medium font-general text-[#000000] mb-4 pl-3 border-l-8 border-[#010D19]">
-            Our Mission
-          </h2>
-          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            At Pacific Pearl Hotels, our mission is to reimagine hotel
-            management by blending timeless hospitality with forward-thinking
-            innovation. We create spaces that honor local culture, elevate guest
-            wellbeing, and deliver lasting value for owners and partners. Guided
-            by sustainability, empowered by technology and data, and inspired by
-            our deep hospitality roots, we aim to be more than operators — we
-            are storytellers of place, architects of experience, and stewards of
-            long-term growth.
-          </p>
-          <h3 className="text-lg font-medium font-general text-[#000000] my-3">
-            Our History
-          </h3>
-          <p className="text-[#393939] text-xl font-normal font-general leading-relaxed">
-            As a company that owns and operates hotels, Pacific Pearl Hotels
-            brings a unique and experienced perspective to managing hotels. We
-            identify opportunities for growth and formulate solutions to provide
-            our partners with rapid operational revival. Our work with our
-            partners results in improved cash flow, profitability and stabilized
-            performance throughout our portfolio.
-          </p>
-        </motion.section>
-
         {/* Operations */}
         <motion.section
           id="operations"

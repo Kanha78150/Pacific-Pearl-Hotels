@@ -51,6 +51,14 @@ const features = [
     description:
       "Our design-driven approach creates memorable experiences that resonate.",
   },
+
+  {
+    image: "/images/standout/slide5.jpg",
+    icon: Hotel,
+    title: "SUSTAINABILITY FOCUS ",
+    description:
+      "Our design-driven approach creates memorable experiences that resonate.",
+  },
   {
     image: "/images/standout/slide4.jpg",
     icon: Bed,
@@ -105,9 +113,14 @@ Please provide more details.`;
           Why We Stand Out in Hospitality
         </h2>
         <p className="text-[#191919] font-general font-normal text-lg mb-6">
-          Our commitment to proven performance ensures consistent success across
-          our properties. We leverage data-driven strategies to maximize returns
-          and enhance guest satisfaction.
+          At Pacific Pearl Hotels, our mission is to reimagine hotel management
+          by blending timeless hospitality with forward-thinking innovation. We
+          create spaces that honor local culture, elevate guest wellbeing, and
+          deliver lasting value for owners and partners. Guided by
+          sustainability, empowered by technology and data, and inspired by our
+          deep hospitality roots, we aim to be more than operators. We are
+          storytellers of place, architects of experience, and stewards of
+          long-term growth.
         </p>
         {/* Smart Join Us Button */}
         {isMobile ? (
@@ -156,7 +169,7 @@ Please provide more details.`;
                   height={400}
                   className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-black/40 p-3">
+                <div className="absolute bottom-0 left-0 w-full bg-black/40 p-3 uppercase">
                   <p className="text-white text-lg font-medium">{item.title}</p>
                 </div>
               </div>

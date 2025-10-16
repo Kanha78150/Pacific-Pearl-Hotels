@@ -4,7 +4,6 @@ import { useEffect } from "react";
 
 const sections = [
   { id: "philosophy", label: "Corporate Philosophy" },
-  { id: "mission", label: "Our Mission" },
   { id: "operations", label: "Operations" },
   { id: "management", label: "Management" },
   { id: "consulting", label: "Consulting" },
