@@ -3,7 +3,7 @@ import Card from "../ui/Card";
 export default function HotelCard() {
   const hotels = [
     {
-      name: "Doubletree by Hilton Phoenix Midtown",
+      name: "DoubleTree by Hilton Phoenix Midtown",
       location: "Phoenix, AZ",
       phone: "(602) 279-9811",
       rating: "3-Star Hotel",
@@ -54,7 +54,7 @@ export default function HotelCard() {
       status: "Current",
     },
     {
-      name: "Doubletree Pleasanton at the Club",
+      name: "DoubleTree Pleasanton at the Club",
       location: "Pleasanton, CA",
       phone: "(925) 463-8000",
       rating: "3.5-Star Hotel",
@@ -315,7 +315,7 @@ export default function HotelCard() {
       phone: "N/A",
       rating: "4-Star Hotel",
       rooms: 322,
-      image: "/images/Hotels/MayflowerInnandSpa.jpeg",
+      image: "/images/Hotels/SheratonGunter.webp",
       link: "https://www.marriott.com/en-us/hotels/satgs-sheraton-gunter-hotel-san-antonio/overview/?EM=DNM_SHERATONGUNTER.COM",
       status: "Exited",
     },
@@ -928,6 +928,16 @@ export default function HotelCard() {
       rooms: 258,
       image: "/images/Hotels/Le Méridien Dallas by the Galleria.jpg",
       link: "https://www.marriott.com/en-us/hotels/dalmd-le-meridien-dallas-by-the-galleria/overview/",
+      status: "Exited",
+    },
+    {
+      name: "Sheraton Dallas Hotel by the Galleria",
+      location: "Dallas, Texas",
+      phone: "N/A",
+      rating: "3-Star Hotel",
+      rooms: 279,
+      image: "/images/Hotels/SheratonDallasHotelbytheGalleria.webp",
+      link: "https://www.marriott.com/en-us/hotels/dalsl-sheraton-dallas-hotel-by-the-galleria/overview/",
       status: "Exited",
     },
   ];
