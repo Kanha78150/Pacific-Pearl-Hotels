@@ -252,7 +252,7 @@ const ServicesContent = () => {
           {/* Gray card container */}
           <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md">
             {/* Top: Image + Text */}
-            <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex flex-col md:flex-row items-start gap-6">
               {/* Left: Image */}
               <div className="flex-shrink-0 flex justify-center">
                 <Image
@@ -260,13 +260,13 @@ const ServicesContent = () => {
                   alt="Food & Beverage"
                   width={354}
                   height={298}
-                  className="shadow-lg object-cover"
+                  className="shadow-lg object-cover rounded-md"
                 />
               </div>
 
               {/* Right: Text */}
               <div className="flex-1">
-                <h3 className="text-xl text-[#393939] font-medium font-general mb-3 ">
+                <h3 className="text-xl text-[#393939] font-medium font-general mb-3">
                   Food & Beverage
                 </h3>
                 <p className="text-[#393939] text-lg font-general font-normal leading-snug">
@@ -281,6 +281,39 @@ const ServicesContent = () => {
                   and ordering and labor to meet brand established standards and
                   our own quality control.
                 </p>
+              </div>
+            </div>
+
+            {/* Bottom: Highlighted Achievements (starts under image) */}
+            <div className="mt-6 space-y-3 w-full">
+              {/* First row: 3 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Menu design and cost control
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Vendor and supplier management
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Food safety and hygiene compliance
+                </span>
+              </div>
+
+              {/* Second row: 2 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Training and staff development programs
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center w-fit">
+                  Guest satisfaction and feedback analysis
+                </span>
+              </div>
+
+              {/* Third row: 1 span */}
+              <div className="grid grid-cols-1 gap-3">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center w-fit">
+                  Sustainable sourcing and waste reduction initiatives
+                </span>
               </div>
             </div>
           </div>
@@ -408,10 +441,34 @@ const ServicesContent = () => {
                 </p>
               </div>
             </div>
+
+            {/* Bottom: Highlighted Achievements (spans full width under image) */}
+            <div className="mt-6 space-y-3 w-full">
+              {/* First row: 3 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Maximizing hotel asset value
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Driven by owner’s vision
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Peak performance, every property
+                </span>
+              </div>
+
+              {/* Second row: 2 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Strategic, data-led hotel management
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Sales & Marketing */}
           <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md">
+            {/* Top: Image and Text Side-by-Side */}
             <div className="flex flex-col md:flex-row gap-6">
               {/* Left: Image */}
               <div className="flex-shrink-0 flex justify-center items-start">
@@ -437,6 +494,39 @@ const ServicesContent = () => {
                   tailored training and tools to support brand-driven marketing
                   efforts.
                 </p>
+              </div>
+            </div>
+
+            {/* Bottom: Highlighted Achievements (rows start under image) */}
+            <div className="mt-6 space-y-3 w-full">
+              {/* First row: 3 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Strategic sales planning
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Brand and market positioning
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Revenue growth initiatives
+                </span>
+              </div>
+
+              {/* Second row: 2 spans */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center">
+                  Digital marketing and advertising campaigns
+                </span>
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center w-fit">
+                  Sales training and performance tracking
+                </span>
+              </div>
+
+              {/* Third row: 1 span */}
+              <div className="grid grid-cols-1 gap-3">
+                <span className="bg-[#F7FBFF] px-2 py-2 border border-[#00224B] text-sm text-[#00224B] font-medium text-left inline-flex items-center w-fit">
+                  Partnership development and local outreach programs
+                </span>
               </div>
             </div>
           </div>
